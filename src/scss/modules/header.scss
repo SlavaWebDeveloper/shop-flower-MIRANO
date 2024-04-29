@@ -1,0 +1,83 @@
+@use "../varibles" as *;
+
+.header {
+  padding-block: 32px;
+
+  // .header__container
+
+  &__container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  // .header__form
+
+  &__form {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+    height: 40px;
+  }
+
+  // .header__input
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    padding: 8px 56px 8px 16px;
+    border: none;
+
+    &::placeholder {
+      color: rgba($dark, 0.3);
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  // .header__search-button
+
+  &__search-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 32px;
+    background: $light-orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .header__logo
+
+  &__logo {
+  }
+
+  // .header__cart-button
+
+  &__cart-button {
+    justify-self: end;
+
+    background: url("/img/cart.svg") no-repeat center/contain;
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+    color: $orange;
+  }
+}

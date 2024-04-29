@@ -1,0 +1,18 @@
+{
+  "name": "shop-flower-mirano",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.75.0",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

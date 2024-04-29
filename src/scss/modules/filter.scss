@@ -1,0 +1,56 @@
+@use "../varibles" as *;
+@use "../mixin" as *;
+
+.filter {
+  margin-bottom: 60px;
+
+  // .filter__fieldset
+
+  &__fieldset {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .filter__radio
+
+  &__radio {
+    position: absolute;
+    appearance: none;
+
+    &:focus + .filter__label {
+      background-color: $orange;
+      border: 1px solid $light-orange;
+      color: $white;
+    }
+
+    &:checked + .filter__label {
+      background: $light-orange;
+      color: $white;
+    }
+  }
+
+  // .filter__label
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 300px;
+    background: $white;
+    
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    
+    @include hover {
+      background-color: $orange;
+      color: $white;
+    }
+  }
+}
