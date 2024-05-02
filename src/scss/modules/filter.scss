@@ -1,5 +1,6 @@
 @use "../varibles" as *;
 @use "../mixin" as *;
+@use "../media" as *;
 
 .filter {
   // .filter__container
@@ -8,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 32px;
   }
 
@@ -15,6 +17,7 @@
 
   &__group {
     display: flex;
+    flex-wrap: wrap;
     border: 0;
     padding: 0;
     margin: 0;
@@ -24,6 +27,10 @@
 
     &_choices {
       column-gap: 64px;
+
+      @include mobile {
+        column-gap: 40px;
+      }
     }
   }
 
@@ -37,8 +44,12 @@
   // .filter__label
 
   &__label {
+    display: flex;
+    align-items: center;
+    
     padding: 16px;
     padding-left: 60px;
+    min-height: 72px;
     border-radius: 300px;
     background-color: $white;
     cursor: pointer;
@@ -49,27 +60,34 @@
     background-position: center left 16px;
     background-repeat: no-repeat;
 
+    @include mobile {
+      background-size: 24px;
+      background-position: center left 12px;
+      padding: 10px 12px 10px 40px;
+      min-height: 40px;
+    }
+
     // .filter__label_flower
 
     &_flower {
-      background-image: url('./img/filter/flowers@2x.png');
+      background-image: url("./img/filter/flowers@2x.png");
     }
 
     // .filter__label_toys
 
     &_toys {
-      background-image: url('./img/filter/toys@2x.png');
+      background-image: url("./img/filter/toys@2x.png");
     }
 
     // .filter__label_postcard
 
     &_postcard {
-      background-image: url('./img/filter/postcard@2x.png');
+      background-image: url("./img/filter/postcard@2x.png");
     }
 
     @include hover {
       background-color: $orange;
-    } 
+    }
   }
 
   &__radio:focus-visible + &__label {
@@ -94,11 +112,21 @@
     column-gap: 8px;
 
     &::after {
-      content: '';
+      content: "";
       width: 8px;
       height: 8px;
-      background: url('./img/filter/arrow.svg') no-repeat center/contain;
+      background: url("./img/filter/arrow.svg") no-repeat center/contain;
     }
+  }
+
+  // .filter__choices-box
+
+  &__choices-box {
+  }
+
+  // .filter__input-price
+
+  &__input-price {
   }
 
   // .filter__input-price

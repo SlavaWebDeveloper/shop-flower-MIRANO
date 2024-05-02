@@ -1,19 +1,29 @@
 @use "../varibles" as *;
+@use "../media" as *;
 
 .subscription {
   padding-block: 80px 140px;
+
+  @include tablet {
+    padding-block: 60px 100px;
+  }
 
   // .subscription__title
 
   &__title {
     font-family: $second-family;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 3.125rem;
     line-height: 1.2;
     text-transform: uppercase;
     text-align: center;
     color: $green;
     margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
   }
 
   // .subscription__form

@@ -11,3 +11,17 @@
     }
   }
 }
+
+@mixin responsive-font-size($min-size, $max-size, $min-screen, $max-screen) {
+  font-size: clamp(
+    #{$min-size}px,
+    calc(
+      #{$min-size}px +
+        (
+          #{$max-size - $min-size} * ((100vw - #{$min-screen}px) /
+                (#{$max-screen - $min-screen}))
+        )
+    ),
+    #{$max-size}px
+  );
+}

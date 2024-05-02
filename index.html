@@ -180,8 +180,8 @@
             <div class="filter__choices choices">
               <button class="filter__select choices__btn">Цена</button>
 
-              <div class="choices__box">
-                <fieldset class="fieldset__group">
+              <div class="choices__box filter__choices-box">
+                <fieldset class="fieldset__price">
                   <input
                     class="filter__input-price"
                     type="text"
@@ -199,7 +199,7 @@
             <div class="filter__choices choices">
               <button class="filter__select choices__btn">Тип товара</button>
 
-              <div class="choices__box">
+              <div class="choices__box filter__choices-box">
                 <ul class="filter__type-list">
                   <li class="filter__type-item">
                     <button class="filter__type-btn">Монобукеты</button>
@@ -246,15 +246,18 @@
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>
 
-                  <p class="card__date">сегодня в 14:00</p>
+                  <div class="card__footer">
+                    <p class="card__date">сегодня в 14:00</p>
 
-                  <button class="card__button">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__button-text"> </span>
-                  </button>
+                    <button class="card__button">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__button-text">в&nbsp;корзину</span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li class="goods__item">
               <article class="goods__card card">
                 <img
@@ -271,15 +274,18 @@
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>
 
-                  <p class="card__date">сегодня в 14:00</p>
+                  <div class="card__footer">
+                    <p class="card__date">сегодня в 14:00</p>
 
-                  <button class="card__button">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__button-text"> </span>
-                  </button>
+                    <button class="card__button">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__button-text">в корзину</span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li class="goods__item">
               <article class="goods__card card">
                 <img
@@ -296,15 +302,18 @@
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>
 
-                  <p class="card__date">сегодня в 14:00</p>
+                  <div class="card__footer">
+                    <p class="card__date">сегодня в 14:00</p>
 
-                  <button class="card__button">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__button-text"> </span>
-                  </button>
+                    <button class="card__button">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__button-text">в корзину</span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li class="goods__item">
               <article class="goods__card card">
                 <img
@@ -321,12 +330,42 @@
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>
 
-                  <p class="card__date">сегодня в 14:00</p>
+                  <div class="card__footer">
+                    <p class="card__date">сегодня в 14:00</p>
 
-                  <button class="card__button">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__button-text">в корзину</span>
-                  </button>
+                    <button class="card__button">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__button-text">в корзину</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="goods__item">
+              <article class="goods__card card">
+                <img
+                  src="./img/card/01.jpg"
+                  alt=""
+                  class="card__image"
+                  width="310"
+                  height="359"
+                  loading="lazy"
+                />
+
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h3>
+
+                  <div class="card__footer">
+                    <p class="card__date">сегодня в 14:00</p>
+
+                    <button class="card__button">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__button-text"> </span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
@@ -336,7 +375,7 @@
 
       <section class="subscription">
         <div class="container">
-          <h2 class="subscription__title">Пoдпишись на рассылку</h2>
+          <h2 class="subscription__title">Пoдпишись на&nbsp;рассылку</h2>
 
           <form class="subscription__form" action="#">
             <input
@@ -440,11 +479,15 @@
 
           <ul class="footer__developers-list">
             <li class="footer__developers-item">
-              Designer: <a class="footer__link" href="Anastasia-Ilina">Anastasia Ilina</a>
+              Designer:
+              <a class="footer__link" href="Anastasia-Ilina">Anastasia Ilina</a>
             </li>
 
             <li class="footer__developers-item">
-              Developer: <a class="footer__link" href="https://t.me/Sidorov_vv3">Sidorov_vv3</a>
+              Developer:
+              <a class="footer__link" href="https://t.me/Sidorov_vv3"
+                >Sidorov_vv3</a
+              >
             </li>
           </ul>
         </div>

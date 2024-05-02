@@ -1,4 +1,7 @@
 @use '../varibles' as *;
+@use '../mixin' as *;
+@use '../media' as *;
+
 .goods {
   padding-block: 60px;
 
@@ -13,15 +16,28 @@
     text-align: center;
     color: $green;
     margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
   }
 
   // .goods__list
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 310px);
+    grid-template-columns: repeat(auto-fit, 310px);
     justify-content: center;
     gap: 24px 20px;
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include mobile {
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
+      column-gap: 12px;
+    }
   }
 
   // .goods__item

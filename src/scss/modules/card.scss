@@ -1,4 +1,6 @@
 @use "../varibles" as *;
+@use "../mixin" as *;
+@use "../media" as *;
 
 .card {
   background: $white;
@@ -9,12 +11,21 @@
   display: flex;
   flex-direction: column;
 
+  @include mobile {
+    min-height: 380px;
+    border-radius: 20px;
+  }
+
   // .card__image
 
   &__image {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     height: 359px;
+
+    @include mobile {
+      height: 180px;
+    }
   }
 
   // .card__content
@@ -22,33 +33,53 @@
   &__content {
     padding: 24px 16px;
     flex-grow: 1;
-
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-    grid-template-rows: 1fr min-content;
-    grid-template-columns: max-content 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
+
+    @include mobile {
+      padding: 16px 12px;
+    }
   }
 
   // .card__title
 
   &__title {
+    flex-grow: 1;
     font-weight: 400;
     font-size: 1.125rem;
-    align-self: start;
-    grid-column: 1 / -1;
+
+    @include mobile {
+      font-size: .875rem;
+    }
+  }
+
+  // .card__footer
+  &__footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 16px;
+
+    @include mobile {
+      align-items: stretch;
+      flex-direction: column;
+    }
   }
 
   // .card__date
 
   &__date {
-    font-size: 0.875rem;
-
     padding-left: 20px;
     background-image: url("./img/card/delivery.svg");
     background-repeat: no-repeat;
     background-position: left bottom;
+    
+    font-size: 0.875rem;
+    
+    @include mobile {
+      font-size: .75rem;
+    }
   }
 
   // .card__button
