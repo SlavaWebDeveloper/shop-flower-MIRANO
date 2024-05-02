@@ -1,0 +1,92 @@
+@use "../varibles" as *;
+@use "../mixin" as *;
+
+.footer {
+  padding-block: 80px;
+  background: $footer url('./img/figure.svg') no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  // .footer__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  // .footer__logo
+
+  &__logo {
+    width: 200px;
+  }
+
+  // .footer__address
+
+  &__address {
+    font-style: normal;
+  }
+
+  // .footer__mail
+
+  &__mail {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  // .footer__social-list
+
+  &__social-list {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    column-gap: 12px;
+  }
+
+  // .footer__social-item
+
+  &__social-item {
+  }
+
+  // .footer__social-link
+
+  &__social-link {
+  }
+
+  // .footer__developers
+
+  &__developers {
+  }
+
+  // .footer__developers-title
+
+  &__developers-title {
+    margin-bottom: 3px;
+  }
+
+  // .footer__developers-list
+
+  &__developers-list {
+  }
+
+  // .footer__developers-item
+
+  &__developers-item {
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+
+  // .footer__copyright
+
+  &__copyright {
+    text-transform: uppercase;
+  }
+
+  &__link{
+    @include hover {
+      color: $green;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@use "../varibles" as *;
+
+.card {
+  background: $white;
+  border-radius: 32px;
+  overflow: hidden;
+  min-height: 531px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  // .card__image
+
+  &__image {
+    object-fit: contain;
+    width: 100%;
+    height: 359px;
+  }
+
+  // .card__content
+
+  &__content {
+    padding: 24px 16px;
+    flex-grow: 1;
+
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: max-content 1fr;
+    gap: 16px;
+  }
+
+  // .card__title
+
+  &__title {
+    font-weight: 400;
+    font-size: 1.125rem;
+    align-self: start;
+    grid-column: 1 / -1;
+  }
+
+  // .card__date
+
+  &__date {
+    font-size: 0.875rem;
+
+    padding-left: 20px;
+    background-image: url("./img/card/delivery.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+  // .card__button
+
+  &__button {
+    border-radius: 32px;
+    padding: 8px 16px;
+    min-width: 120px;
+    background: $light-orange;
+
+    color: $white;
+  }
+
+  // .card__price
+
+  &__price {
+  }
+
+  // .card__button-text
+
+  &__button-text {
+    display: none;
+  }
+}

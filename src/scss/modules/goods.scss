@@ -1,0 +1,36 @@
+@use '../varibles' as *;
+.goods {
+  padding-block: 60px;
+
+  // .goods__title
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 3.125rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: $green;
+    margin-bottom: 40px;
+  }
+
+  // .goods__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    justify-content: center;
+    gap: 24px 20px;
+  }
+
+  // .goods__item
+
+  &__item {
+  }
+
+  // .goods__card
+
+  &__card {
+  }
+}
