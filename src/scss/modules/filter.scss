@@ -2,55 +2,122 @@
 @use "../mixin" as *;
 
 .filter {
-  margin-bottom: 60px;
+  // .filter__container
 
-  // .filter__fieldset
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
 
-  &__fieldset {
-    display: inline-block;
-    border: none;
-    margin: 0;
+  // .filter__group
+
+  &__group {
+    display: flex;
+    border: 0;
     padding: 0;
+    margin: 0;
+    gap: 12px;
+
+    // .filter__group_choices
+
+    &_choices {
+      column-gap: 64px;
+    }
   }
 
   // .filter__radio
 
   &__radio {
-    position: absolute;
     appearance: none;
-
-    &:focus + .filter__label {
-      background-color: $orange;
-      border: 1px solid $light-orange;
-      color: $white;
-    }
-
-    &:checked + .filter__label {
-      background: $light-orange;
-      color: $white;
-    }
+    position: absolute;
   }
 
   // .filter__label
 
   &__label {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-
     padding: 16px;
-    border: 1px solid transparent;
-    cursor: pointer;
+    padding-left: 60px;
     border-radius: 300px;
-    background: $white;
-    
-    &:not(:last-child) {
-      margin-right: 12px;
+    background-color: $white;
+    cursor: pointer;
+
+    color: $dark;
+
+    background-size: 40px;
+    background-position: center left 16px;
+    background-repeat: no-repeat;
+
+    // .filter__label_flower
+
+    &_flower {
+      background-image: url('./img/filter/flowers@2x.png');
     }
-    
+
+    // .filter__label_toys
+
+    &_toys {
+      background-image: url('./img/filter/toys@2x.png');
+    }
+
+    // .filter__label_postcard
+
+    &_postcard {
+      background-image: url('./img/filter/postcard@2x.png');
+    }
+
     @include hover {
       background-color: $orange;
-      color: $white;
+    } 
+  }
+
+  &__radio:focus-visible + &__label {
+    outline: 1px solid $orange;
+    outline-offset: 3px;
+  }
+
+  &__radio:checked + &__label {
+    background-color: $light-orange;
+  }
+
+  // .filter__choices
+
+  &__choices {
+  }
+
+  // .filter__select
+
+  &__select {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: url('./img/filter/arrow.svg') no-repeat center/contain;
     }
+  }
+
+  // .filter__input-price
+
+  &__input-price {
+  }
+
+  // .filter__type-list
+
+  &__type-list {
+  }
+
+  // .filter__type-item
+
+  &__type-item {
+  }
+
+  // .filter__type-btn
+
+  &__type-btn {
   }
 }
