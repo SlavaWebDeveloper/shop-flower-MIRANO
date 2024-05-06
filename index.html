@@ -181,7 +181,7 @@
               <button class="filter__select choices__btn">Цена</button>
 
               <div class="choices__box filter__choices-box">
-                <fieldset class="fieldset__price">
+                <fieldset class="filter__price">
                   <input
                     class="filter__input-price"
                     type="text"
@@ -202,7 +202,9 @@
               <div class="choices__box filter__choices-box">
                 <ul class="filter__type-list">
                   <li class="filter__type-item">
-                    <button class="filter__type-btn">Монобукеты</button>
+                    <button class="filter__type-btn filter__type-btn-active">
+                      Монобукеты
+                    </button>
                   </li>
                   <li class="filter__type-item">
                     <button class="filter__type-btn">Авторские букеты</button>
@@ -226,150 +228,272 @@
       </section>
 
       <section class="goods">
-        <div class="container">
-          <h2 class="goods__title">Цветы</h2>
+        <div class="container goods__container">
+          <div class="goods__box">
+            <h2 class="goods__title">Цветы</h2>
 
-          <ul class="goods__list">
-            <li class="goods__item">
-              <article class="goods__card card">
-                <img
-                  src="./img/card/01.jpg"
-                  alt=""
-                  class="card__image"
-                  width="310"
-                  height="359"
-                  loading="lazy"
-                />
+            <ul class="goods__list">
+              <li class="goods__item">
+                <article class="goods__card card">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="card__image"
+                    width="310"
+                    height="359"
+                    loading="lazy"
+                  />
 
-                <div class="card__content">
-                  <h3 class="card__title">
-                    Авторский букет из роз, диантусов и сухоцветов
-                  </h3>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Авторский букет из роз, диантусов и сухоцветов
+                    </h3>
 
-                  <div class="card__footer">
-                    <p class="card__date">сегодня в 14:00</p>
+                    <div class="card__footer">
+                      <p class="card__date">сегодня в 14:00</p>
 
-                    <button class="card__button">
-                      <span class="card__price">3000 ₽</span>
-                      <span class="card__button-text">в&nbsp;корзину</span>
-                    </button>
+                      <button class="card__button">
+                        <span class="card__price">3000 ₽</span>
+                        <span class="card__button-text">в&nbsp;корзину</span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </li>
+                </article>
+              </li>
 
-            <li class="goods__item">
-              <article class="goods__card card">
-                <img
-                  src="./img/card/01.jpg"
-                  alt=""
-                  class="card__image"
-                  width="310"
-                  height="359"
-                  loading="lazy"
-                />
+              <li class="goods__item">
+                <article class="goods__card card">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="card__image"
+                    width="310"
+                    height="359"
+                    loading="lazy"
+                  />
 
-                <div class="card__content">
-                  <h3 class="card__title">
-                    Авторский букет из роз, диантусов и сухоцветов
-                  </h3>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Авторский букет из роз, диантусов и сухоцветов
+                    </h3>
 
-                  <div class="card__footer">
-                    <p class="card__date">сегодня в 14:00</p>
+                    <div class="card__footer">
+                      <p class="card__date">сегодня в 14:00</p>
 
-                    <button class="card__button">
-                      <span class="card__price">3000 ₽</span>
-                      <span class="card__button-text">в корзину</span>
-                    </button>
+                      <button class="card__button">
+                        <span class="card__price">3000 ₽</span>
+                        <span class="card__button-text">в корзину</span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </li>
+                </article>
+              </li>
 
-            <li class="goods__item">
-              <article class="goods__card card">
-                <img
-                  src="./img/card/01.jpg"
-                  alt=""
-                  class="card__image"
-                  width="310"
-                  height="359"
-                  loading="lazy"
-                />
+              <li class="goods__item">
+                <article class="goods__card card">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="card__image"
+                    width="310"
+                    height="359"
+                    loading="lazy"
+                  />
 
-                <div class="card__content">
-                  <h3 class="card__title">
-                    Авторский букет из роз, диантусов и сухоцветов
-                  </h3>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Авторский букет из роз, диантусов и сухоцветов
+                    </h3>
 
-                  <div class="card__footer">
-                    <p class="card__date">сегодня в 14:00</p>
+                    <div class="card__footer">
+                      <p class="card__date">сегодня в 14:00</p>
 
-                    <button class="card__button">
-                      <span class="card__price">3000 ₽</span>
-                      <span class="card__button-text">в корзину</span>
-                    </button>
+                      <button class="card__button">
+                        <span class="card__price">3000 ₽</span>
+                        <span class="card__button-text">в корзину</span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </li>
+                </article>
+              </li>
 
-            <li class="goods__item">
-              <article class="goods__card card">
-                <img
-                  src="./img/card/01.jpg"
-                  alt=""
-                  class="card__image"
-                  width="310"
-                  height="359"
-                  loading="lazy"
-                />
+              <li class="goods__item">
+                <article class="goods__card card">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="card__image"
+                    width="310"
+                    height="359"
+                    loading="lazy"
+                  />
 
-                <div class="card__content">
-                  <h3 class="card__title">
-                    Авторский букет из роз, диантусов и сухоцветов
-                  </h3>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Авторский букет из роз, диантусов и сухоцветов
+                    </h3>
 
-                  <div class="card__footer">
-                    <p class="card__date">сегодня в 14:00</p>
+                    <div class="card__footer">
+                      <p class="card__date">сегодня в 14:00</p>
 
-                    <button class="card__button">
-                      <span class="card__price">3000 ₽</span>
-                      <span class="card__button-text">в корзину</span>
-                    </button>
+                      <button class="card__button">
+                        <span class="card__price">3000 ₽</span>
+                        <span class="card__button-text">в корзину</span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </li>
+                </article>
+              </li>
 
-            <li class="goods__item">
-              <article class="goods__card card">
-                <img
-                  src="./img/card/01.jpg"
-                  alt=""
-                  class="card__image"
-                  width="310"
-                  height="359"
-                  loading="lazy"
-                />
+              <li class="goods__item">
+                <article class="goods__card card">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="card__image"
+                    width="310"
+                    height="359"
+                    loading="lazy"
+                  />
 
-                <div class="card__content">
-                  <h3 class="card__title">
-                    Авторский букет из роз, диантусов и сухоцветов
-                  </h3>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Авторский букет из роз, диантусов и сухоцветов
+                    </h3>
 
-                  <div class="card__footer">
-                    <p class="card__date">сегодня в 14:00</p>
+                    <div class="card__footer">
+                      <p class="card__date">сегодня в 14:00</p>
 
-                    <button class="card__button">
-                      <span class="card__price">3000 ₽</span>
-                      <span class="card__button-text"> </span>
-                    </button>
+                      <button class="card__button">
+                        <span class="card__price">3000 ₽</span>
+                        <span class="card__button-text"> </span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </li>
-          </ul>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <section class="cart">
+            <div class="cart__container">
+              <div class="cart__header">
+                <h3 class="cart__title">Ваш заказ</h3>
+
+                <button class="cart__close">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="5"
+                      y="5.70715"
+                      width="1"
+                      height="25"
+                      transform="rotate(-45 5 5.70715)"
+                      fill="#D17D2F"
+                    />
+                    <rect
+                      x="22.6777"
+                      y="5"
+                      width="1"
+                      height="25"
+                      transform="rotate(45 22.6777 5)"
+                      fill="#D17D2F"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <p class="cart__date">сегодня в 14:00</p>
+
+              <ul class="cart__list">
+                <li class="cart__item">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="cart__image"
+                    width="54"
+                    height="54"
+                    loading="lazy"
+                  />
+
+                  <h4 class="cart__item-title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h4>
+
+                  <div class="cart__counter">
+                    <button class="cart__counter-btn">-</button>
+                    <input
+                      class="cart__counter-input"
+                      type="number"
+                      value="1"
+                    />
+                    <button class="cart__counter-btn">+</button>
+                  </div>
+                  <p class="cart__price">3000&nbsp;₽</p>
+                </li>
+                <li class="cart__item">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="cart__image"
+                    width="54"
+                    height="54"
+                    loading="lazy"
+                  />
+
+                  <h4 class="cart__item-title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h4>
+
+                  <div class="cart__counter">
+                    <button class="cart__counter-btn">-</button>
+                    <input
+                      class="cart__counter-input"
+                      type="number"
+                      value="1"
+                    />
+                    <button class="cart__counter-btn">+</button>
+                  </div>
+                  <p class="cart__price">3000&nbsp;₽</p>
+                </li>
+                <li class="cart__item">
+                  <img
+                    src="./img/card/01.jpg"
+                    alt=""
+                    class="cart__image"
+                    width="54"
+                    height="54"
+                    loading="lazy"
+                  />
+
+                  <h4 class="cart__item-title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h4>
+
+                  <div class="cart__counter">
+                    <button class="cart__counter-btn">-</button>
+                    <input
+                      class="cart__counter-input"
+                      type="number"
+                      value="1"
+                    />
+                    <button class="cart__counter-btn">+</button>
+                  </div>
+                  <p class="cart__price">3000&nbsp;₽</p>
+                </li>
+              </ul>
+
+              <div class="cart__footer">
+                <button class="cart__order-btn">Оформить</button>
+                <p class="cart__price">9000&nbsp;₽</p>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 

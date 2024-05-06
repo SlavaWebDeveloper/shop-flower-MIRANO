@@ -8,6 +8,11 @@
 
   &__box {
     display: none;
+
+    // .choices__box_open 
+    &_open {
+      display: block;
+    }
   }
 }
 .fieldset {

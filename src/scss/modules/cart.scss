@@ -1,0 +1,165 @@
+@use "../varibles" as *;
+@use "../mixin" as *;
+@use "../media" as *;
+
+.cart {
+  padding-top: 100px;
+
+  // .cart__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 32px;
+    padding: 24px 16px;
+    max-width: 310px;
+    min-height: 778px;
+    background-color: $white;
+  }
+
+  // .cart__header
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  // .cart__title
+
+  &__title {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  // .cart__close
+
+  &__close {
+  }
+
+  // .cart__date
+
+  &__date {
+    padding-left: 20px;
+    margin-bottom: 16px;
+    background-image: url("./img/card/delivery.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    font-size: 0.875rem;
+
+    @include mobile {
+      font-size: 0.75rem;
+    }
+  }
+
+  // .cart__list
+
+  &__list {
+  }
+
+  // .cart__item
+
+  &__item {
+    padding-block: 16px;
+    border-bottom: 1px solid rgba($dark, 0.04);
+
+    display: grid;
+    grid-template-columns: 54px 1fr min-content;
+    gap: 8px 12px;
+    grid-template-areas:
+      "image title title"
+      "image counter price";
+  }
+
+  // .cart__image
+
+  &__image {
+    grid-area: image;
+    border-radius: 12px;
+    width: 54px;
+    height: 54px;
+  }
+
+  // .cart__item-title
+
+  &__item-title {
+    grid-area: title;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  // .cart__counter
+
+  &__counter {
+    grid-area: counter;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  // .cart__counter-btn
+
+  &__counter-btn {
+    border-radius: 6px;
+    width: 29px;
+    height: 29px;
+    background: $bg;
+
+    font-size: 14px;
+  }
+
+  // .cart__counter-input
+
+  &__counter-input {
+    width: 31px;
+    border: none;
+    text-align: center;
+
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $light-orange;
+      border-radius: 4px;
+    }
+  }
+
+  // .cart__price
+
+  &__price {
+    grid-area: price;
+    align-self: center;
+  }
+
+  // .cart__footer
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+  }
+
+  // .cart__order-btn
+
+  &__order-btn {
+    border-radius: 32px;
+    padding: 9px 16px 8px 16px;
+    background-color: $light-orange;
+
+    line-height: 1.3;
+    color: $white;
+  }
+}

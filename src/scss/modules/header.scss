@@ -1,8 +1,25 @@
 @use "../varibles" as *;
 @use "../media" as *;
 
+@keyframes slideDown {
+  to {
+    top: 0;
+  } 
+}
+
 .header {
   padding-block: 32px;
+
+  &_fixed {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 4px 2px -2px $footer;
+    background-color: $footer;
+    animation: slideDown .3s forwards;
+  }
 
   @include mobile {
     padding-block: 24px;

@@ -5,6 +5,13 @@
 .goods {
   padding-block: 60px;
 
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
   // .goods__title
 
   &__title {
