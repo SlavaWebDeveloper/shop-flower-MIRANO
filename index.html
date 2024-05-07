@@ -32,7 +32,7 @@
 
     <title>Mirano</title>
 
-    <script type="module" src="/index.js"></script>
+    <script type="module" src="/src/js/index.js"></script>
   </head>
 
   <body>
@@ -199,10 +199,12 @@
             <div class="filter__choices choices">
               <button class="filter__select choices__btn">Тип товара</button>
 
-              <div class="choices__box filter__choices-box">
+              <div
+                class="choices__box filter__choices-box filter__choices-box_type"
+              >
                 <ul class="filter__type-list">
                   <li class="filter__type-item">
-                    <button class="filter__type-btn filter__type-btn-active">
+                    <button class="filter__type-btn filter__type-btn_active">
                       Монобукеты
                     </button>
                   </li>
@@ -252,9 +254,10 @@
                     <div class="card__footer">
                       <p class="card__date">сегодня в 14:00</p>
 
-                      <button class="card__button">
-                        <span class="card__price">3000 ₽</span>
-                        <span class="card__button-text">в&nbsp;корзину</span>
+                      <button class="card__button" type="button">
+                        <span></span><span></span><span></span><span></span>
+                        <div class="card__price">3000 ₽</div>
+                        <div class="card__button-text">в&nbsp;корзину</div>
                       </button>
                     </div>
                   </div>
@@ -280,9 +283,10 @@
                     <div class="card__footer">
                       <p class="card__date">сегодня в 14:00</p>
 
-                      <button class="card__button">
-                        <span class="card__price">3000 ₽</span>
-                        <span class="card__button-text">в корзину</span>
+                      <button class="card__button" type="button">
+                        <span></span><span></span><span></span><span></span>
+                        <div class="card__price">3000 ₽</div>
+                        <div class="card__button-text">в&nbsp;корзину</div>
                       </button>
                     </div>
                   </div>
@@ -308,9 +312,10 @@
                     <div class="card__footer">
                       <p class="card__date">сегодня в 14:00</p>
 
-                      <button class="card__button">
-                        <span class="card__price">3000 ₽</span>
-                        <span class="card__button-text">в корзину</span>
+                      <button class="card__button" type="button">
+                        <span></span><span></span><span></span><span></span>
+                        <div class="card__price">3000 ₽</div>
+                        <div class="card__button-text">в&nbsp;корзину</div>
                       </button>
                     </div>
                   </div>
@@ -336,9 +341,10 @@
                     <div class="card__footer">
                       <p class="card__date">сегодня в 14:00</p>
 
-                      <button class="card__button">
-                        <span class="card__price">3000 ₽</span>
-                        <span class="card__button-text">в корзину</span>
+                      <button class="card__button" type="button">
+                        <span></span><span></span><span></span><span></span>
+                        <div class="card__price">3000 ₽</div>
+                        <div class="card__button-text">в&nbsp;корзину</div>
                       </button>
                     </div>
                   </div>
@@ -364,9 +370,10 @@
                     <div class="card__footer">
                       <p class="card__date">сегодня в 14:00</p>
 
-                      <button class="card__button">
-                        <span class="card__price">3000 ₽</span>
-                        <span class="card__button-text"> </span>
+                      <button class="card__button" type="button">
+                        <span></span><span></span><span></span><span></span>
+                        <div class="card__price">3000 ₽</div>
+                        <div class="card__button-text">в&nbsp;корзину</div>
                       </button>
                     </div>
                   </div>
@@ -430,6 +437,8 @@
                     <input
                       class="cart__counter-input"
                       type="number"
+                      min="0"
+                      max="99"
                       value="1"
                     />
                     <button class="cart__counter-btn">+</button>
@@ -455,6 +464,8 @@
                     <input
                       class="cart__counter-input"
                       type="number"
+                      min="0"
+                      max="99"
                       value="1"
                     />
                     <button class="cart__counter-btn">+</button>
@@ -480,6 +491,8 @@
                     <input
                       class="cart__counter-input"
                       type="number"
+                      min="0"
+                      max="99"
                       value="1"
                     />
                     <button class="cart__counter-btn">+</button>
@@ -489,7 +502,9 @@
               </ul>
 
               <div class="cart__footer">
-                <button class="cart__order-btn">Оформить</button>
+                <button class="cart__order-btn">
+                  Оформить <span></span><span></span><span></span><span></span>
+                </button>
                 <p class="cart__price">9000&nbsp;₽</p>
               </div>
             </div>

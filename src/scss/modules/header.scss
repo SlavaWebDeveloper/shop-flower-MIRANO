@@ -138,5 +138,9 @@
     @include tablet {
       grid-area: cart;
     }
+
+    @include mobile {
+      align-self: flex-start;
+    }
   }
 }

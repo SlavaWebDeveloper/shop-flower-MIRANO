@@ -124,12 +124,20 @@
 
   &__choices-box {
     position: absolute;
+    z-index: 200;
     top: calc(100% + 20px);
     left: 50%;
     transform: translateX(-50%);
     border-radius: 12px;
     padding: 24px;
     background-color: $white;
+
+    // .filter__choices-box_type
+    &_type {
+      @include mobile {
+        padding: 16px;
+      }
+    }
   }
 
   // .filter__price
@@ -151,6 +159,10 @@
     padding: 8px 16px;
     background: $bg;
     border: none;
+
+    @include mobile {
+      width: 80px;
+    }
   }
 
   // .filter__type-list
@@ -161,6 +173,9 @@
   // .filter__type-item
 
   &__type-item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 
   // .filter__type-btn
@@ -168,8 +183,16 @@
   &__type-btn {
     white-space: nowrap;
 
-    &-active {
+    @include hover {
+      color: $light-orange;
+    }
+
+    &_active {
       color: $orange;
     }
   }
 }
+
+// .filter__select::after + .filter__choices-box {
+// rotate: 90deg;
+// }

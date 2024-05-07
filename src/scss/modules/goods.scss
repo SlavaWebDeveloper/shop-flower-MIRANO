@@ -1,6 +1,6 @@
-@use '../varibles' as *;
-@use '../mixin' as *;
-@use '../media' as *;
+@use "../varibles" as *;
+@use "../mixin" as *;
+@use "../media" as *;
 
 .goods {
   padding-block: 60px;
@@ -55,5 +55,10 @@
   // .goods__card
 
   &__card {
+    transition: 1s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }

@@ -50,7 +50,7 @@
     font-size: 1.125rem;
 
     @include mobile {
-      font-size: .875rem;
+      font-size: 0.875rem;
     }
   }
 
@@ -74,11 +74,11 @@
     background-image: url("./img/card/delivery.svg");
     background-repeat: no-repeat;
     background-position: left bottom;
-    
+
     font-size: 0.875rem;
-    
+
     @include mobile {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
   }
 
@@ -91,6 +91,47 @@
     background: $light-orange;
 
     color: $white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+
+    .icon {
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      background-color: $brown;
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      transition: 0.5s;
+      transition-delay: calc((var(--n) - 1) * 0.1s);
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $green;
+    }
+
+    &:hover .icon {
+      transform: translateY(0) scale(2);
+    }
+
+    .icon:nth-child(1) {
+      --n: 1;
+    }
+
+    .icon:nth-child(2) {
+      --n: 2;
+    }
+
+    .icon:nth-child(3) {
+      --n: 3;
+    }
+
+    .icon:nth-child(4) {
+      --n: 4;
+    }
   }
 
   // .card__price
