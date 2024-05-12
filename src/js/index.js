@@ -1,10 +1,10 @@
 import '@/scss/index.scss';
-import { initFixerHeader } from '@/js/modyles/fixerHeader';
-import { initChoices } from './modyles/choices';
-import { initCart } from './modyles/cart';
-import { renderProducts } from './modyles/renderProducts';
-import { initChoicesType } from './modyles/choicesType';
-import { filterProducts } from './modyles/filterProducts';
+import { initFixerHeader } from '@/js/modules/fixerHeader';
+import { initChoices } from './modules/choices';
+import { initCart } from './modules/cart';
+import { renderProducts } from './modules/renderProducts';
+import { initChoicesType } from './modules/choicesType';
+import { filterProducts } from './modules/filterProducts';
 
 const init = () => {
   initFixerHeader();

@@ -1,4 +1,4 @@
-import { API_URL } from "./modyles/API"
+import { API_URL } from "./modules/API"
 
 export const ProductCard = (product) => {
   return (
