@@ -12,6 +12,13 @@
     column-gap: 20px;
   }
 
+  // .goods__box
+  
+  &__box {
+    max-width: 970px;
+    flex-grow: 1;
+  }
+
   // .goods__title
 
   &__title {
@@ -37,7 +44,6 @@
     grid-template-columns: repeat(auto-fit, 310px);
     justify-content: center;
     gap: 24px 20px;
-    max-width: 970px;
     width: 100%;
     margin: 0 auto;
 

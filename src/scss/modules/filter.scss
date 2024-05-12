@@ -3,9 +3,9 @@
 @use "../media" as *;
 
 .filter {
-  // .filter__container
+  // .filter__form
 
-  &__container {
+  &__form {
     display: flex;
     align-items: center;
     justify-content: space-between;
