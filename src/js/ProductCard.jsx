@@ -21,14 +21,27 @@ export const ProductCard = (product) => {
           <div class="card__footer">
             <p class="card__date">сегодня в 14:00</p>
 
-            <button class="card__button" type="button">
+            <button
+              class="card__button"
+              type="button"
+              onMouseEnter={(e) => {
+                const priceNode = e.currentTarget.querySelector('.card__price');
+                if (priceNode) {
+                  priceNode.textContent = "В корзину";
+                }
+              }}
+              onMouseLeave={(e) => {
+                const priceNode = e.currentTarget.querySelector('.card__price');
+                if (priceNode) {
+                  priceNode.textContent = `${product.price} ₽`;
+                }
+              }}
+            >
               <span class="icon"></span>
               <span class="icon"></span>
               <span class="icon"></span>
               <span class="icon"></span>
-
-              <div class="card__price">{product.price}&nbsp;₽</div>
-              <div class="card__button-text">в&nbsp;корзину</div>
+              <span class="card__price">{product.price}&nbsp;₽</span>
             </button>
           </div>
         </div>

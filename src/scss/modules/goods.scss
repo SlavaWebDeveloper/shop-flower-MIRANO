@@ -67,4 +67,11 @@
       transform: scale(1.05);
     }
   }
+
+  &__no-product {
+    text-align: center;
+    font-size: 1.5rem;
+    color: $green;
+    grid-column: 1 / -1;
+  }
 }

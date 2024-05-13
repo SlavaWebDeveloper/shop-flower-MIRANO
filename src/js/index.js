@@ -5,12 +5,14 @@ import { initCart } from './modules/cart';
 import { renderProducts } from './modules/renderProducts';
 import { initChoicesType } from './modules/choicesType';
 import { filterProducts } from './modules/filterProducts';
+import { initSearchProducts } from './modules/searchProducts';
 
 const init = () => {
   initFixerHeader();
   initChoices();
   initChoicesType();
   initCart();
+  initSearchProducts();
   renderProducts();
   filterProducts();
 };
