@@ -34,13 +34,14 @@
 
     border-radius: 32px;
     padding: 24px 16px;
-    max-width: 310px;
+    max-width: 100%;
+    width: 310px;
     min-height: 778px;
     height: 100%;
     background-color: $white;
 
     @include mobile {
-      min-height: auto;
+      min-height: 300px;
       height: auto;
       max-width: 100%;
       width: 100%;
@@ -243,5 +244,12 @@
     span:nth-child(4) {
       --n: 4;
     }
+  }
+
+  // .cart__no-product {
+  &__no-product {
+    color: $orange;
+    font-size: 1.5rem;
+    text-align: center;
   }
 }

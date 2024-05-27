@@ -1,4 +1,4 @@
-import { store } from "./Store";
+import { productStore } from "./Store";
 
 const formatQueryString = params => {
   if (Object.keys(params).length === 0) {
@@ -14,7 +14,7 @@ const formatQueryString = params => {
 }
 
 
-export const API_URL = 'http://localhost:3000';
+export const API_URL = 'https://upbeat-gorgeous-roll.glitch.me';
 
 export const fetchProducts = async (params = {}) => {
   try {
@@ -25,7 +25,7 @@ export const fetchProducts = async (params = {}) => {
 
     const products = await respone.json();
 
-    store.setProducts(products);
+    productStore.setProducts(products);
   } catch (error) {
     console.error(`Ошибка при получении данных: ${error}`);
     return [];

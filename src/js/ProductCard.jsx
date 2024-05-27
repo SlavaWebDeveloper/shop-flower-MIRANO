@@ -1,4 +1,5 @@
 import { API_URL } from "./modules/API"
+import { cartStore } from "./modules/Store";
 
 export const ProductCard = (product) => {
   return (
@@ -34,7 +35,10 @@ export const ProductCard = (product) => {
                 const priceNode = e.currentTarget.querySelector('.card__price');
                 if (priceNode) {
                   priceNode.textContent = `${product.price} ₽`;
-                }
+                };
+              }}
+              onClick={() => {
+                cartStore.addProductCart(product.id);
               }}
             >
               <span class="icon"></span>
@@ -46,6 +50,6 @@ export const ProductCard = (product) => {
           </div>
         </div>
       </article>
-    </li>
+    </li >
   )
 }

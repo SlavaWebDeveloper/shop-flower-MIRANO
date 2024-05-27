@@ -1,10 +1,10 @@
 import { ProductCard } from "../ProductCard";
-import { store } from "./Store.js";
+import { productStore } from "./Store.js";
 
 export const renderProducts = async () => {
   const goodsList = document.querySelector('.goods__list');
   const updateList = () => {
-    const products = store.getProducts();
+    const products = productStore.getProducts();
     goodsList.innerHTML = "";
 
     if (products.length === 0) {
@@ -22,7 +22,7 @@ export const renderProducts = async () => {
 
   };
 
-  store.subcribe(updateList);
+  productStore.subcribe(updateList);
   updateList();
   // const products = await fetchProducts();
   // const productCards = products.map(product => ProductCard(product));

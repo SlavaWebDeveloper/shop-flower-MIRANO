@@ -1,5 +1,5 @@
 import { ListType } from "../ListType";
-import { store } from "./Store";
+import { productStore } from "./Store";
 
 export const initChoicesType = () => {
   const typeChoices = document.querySelector('.filter__choices_type');
@@ -7,7 +7,7 @@ export const initChoicesType = () => {
 
   const updateTypeChoicesVisibility = () => {
 
-    const categories = store.getCategories();
+    const categories = productStore.getCategories();
 
     if (categories.size) {
       const listType = ListType([...categories]);
@@ -19,7 +19,7 @@ export const initChoicesType = () => {
     }
 
   };
-  store.subcribe(updateTypeChoicesVisibility);
+  productStore.subcribe(updateTypeChoicesVisibility);
 
   updateTypeChoicesVisibility();
 }
