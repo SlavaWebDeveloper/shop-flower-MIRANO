@@ -6,6 +6,8 @@ import { renderProducts } from './modules/renderProducts';
 import { initChoicesType } from './modules/choicesType';
 import { filterProducts } from './modules/filterProducts';
 import { initSearchProducts } from './modules/searchProducts';
+import { initOrder } from './modules/orderController';
+
 
 const init = () => {
   initFixerHeader();
@@ -15,6 +17,7 @@ const init = () => {
   initSearchProducts();
   renderProducts();
   filterProducts();
+  initOrder();
 };
 
 init();

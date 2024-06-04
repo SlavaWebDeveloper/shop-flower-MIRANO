@@ -31,3 +31,24 @@ export const fetchProducts = async (params = {}) => {
     return [];
   }
 };
+
+export const sendOrder = async (orderData) => {
+  try {
+    const response = await fetch(`${API_URL}/api/orders`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(orderData),
+    })
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+  }
+}

@@ -221,6 +221,10 @@
       z-index: -1;
     }
 
+    &:disabled {
+      background-color: rgba($light-orange, .4);
+    }
+
     &:hover {
       color: $green;
     }

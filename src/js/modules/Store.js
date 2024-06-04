@@ -126,6 +126,11 @@ class CartStore extends Store {
   async addProductCart(id) {
     await this.postCart({ id, quantity: 1 });
   }
+
+  clearCart() {
+    this.cart = [];
+    this.notifyObservers();
+  }
 }
 
 export const productStore = new ProductStore();
