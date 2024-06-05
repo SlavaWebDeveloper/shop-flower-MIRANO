@@ -78,6 +78,6 @@ export const initChoices = () => {
       })
     );
 
-    productStore.subcribe(() => adjustElementPosition(box))
+    productStore.subcribe(() => adjustElementPosition(choicesBox))
   })
 };
