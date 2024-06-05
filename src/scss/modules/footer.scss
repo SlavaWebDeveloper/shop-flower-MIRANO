@@ -4,7 +4,7 @@
 
 .footer {
   padding-block: 80px;
-  background: $footer url('./img/figure.svg') no-repeat;
+  background: $footer url('../img/figure.svg') no-repeat;
   background-position: bottom;
   background-size: 100%;
 
@@ -18,7 +18,7 @@
 
   @include mobile {
     padding-block: 60px;
-    background: $footer url('./img/figure.svg') no-repeat;
+    background: $footer url('../img/figure.svg') no-repeat;
     background-position: center bottom;
     background-size: 1000px 300px;
 

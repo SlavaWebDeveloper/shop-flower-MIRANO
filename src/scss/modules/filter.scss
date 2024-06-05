@@ -70,19 +70,19 @@
     // .filter__label_flower
 
     &_flower {
-      background-image: url("./img/filter/flowers@2x.png");
+      background-image: url("../img/filter/flowers@2x.png");
     }
 
     // .filter__label_toys
 
     &_toys {
-      background-image: url("./img/filter/toys@2x.png");
+      background-image: url("../img/filter/toys@2x.png");
     }
 
     // .filter__label_postcard
 
     &_postcard {
-      background-image: url("./img/filter/postcard@2x.png");
+      background-image: url("../img/filter/postcard@2x.png");
     }
 
     @include hover {
@@ -116,7 +116,7 @@
       content: "";
       width: 8px;
       height: 8px;
-      background: url("./img/filter/arrow.svg") no-repeat center/contain;
+      background: url("../img/filter/arrow.svg") no-repeat center/contain;
     }
   }
 
