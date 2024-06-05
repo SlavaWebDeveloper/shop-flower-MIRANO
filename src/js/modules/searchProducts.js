@@ -1,4 +1,4 @@
-import { fetchProducts } from "./API";
+import { productStore } from "./Store";
 import { callBackWithPreload } from "./preload";
 
 export const initSearchProducts = () => {
@@ -16,7 +16,7 @@ export const initSearchProducts = () => {
 
     if (searchQuery) {
       goodsTitle.textContent = 'Результат поиска';
-      callBackWithPreload(goodsSection, fetchProducts, { search: searchQuery });
+      callBackWithPreload(goodsSection, productStore.fetchProducts(), { search: searchQuery });
     }
   })
 }

@@ -1,4 +1,4 @@
-import { API_URL } from "./API";
+import { API_URL, fetchProducts } from "./API";
 
 class Store {
   constructor() {
@@ -17,16 +17,46 @@ class Store {
 class ProductStore extends Store {
   constructor() {
     super();
-    this.products = [];
+    this._products = [];
     this.categories = new Set();
+    this._loading = false;
+    this.error = null;
   };
 
-  getProducts() {
-    return this.products;
+  fetchProducts() {
+    const _self = this;
+    return async (params) => {
+      try { 
+        _self.error = null;
+        _self._loading = true;
+        _self.products = await fetchProducts(params);
+        _self._loading = this.false;
+        _self.notifyObservers();
+      } catch (error) {
+        _self.error = error;
+        _self.products = [];
+        _self._loading = false;
+        _self.notifyObservers();
+      }
+    }
+  }
+
+  get products() {
+    return this._products;
   };
 
-  setProducts(newProducts) {
-    this.products = newProducts;
+  get loading() {
+    return this._loading;
+  };
+
+  set loading(bool) {
+    this._loading = bool;
+    this.notifyObservers();
+  };
+
+
+  set products(newProducts) {
+    this._products = newProducts;
     this.updateCategories(newProducts);
     this.notifyObservers();
   };

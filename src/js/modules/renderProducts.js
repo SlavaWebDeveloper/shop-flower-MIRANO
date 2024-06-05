@@ -4,10 +4,10 @@ import { productStore } from "./Store.js";
 export const renderProducts = async () => {
   const goodsList = document.querySelector('.goods__list');
   const updateList = () => {
-    const products = productStore.getProducts();
+    const products = productStore.products();
     goodsList.innerHTML = "";
 
-    if (products.length === 0) {
+    if (products.length === 0 && !productStore._loading) {
       const messageItem = document.createElement('li');
       messageItem.textContent = 'Товары не найдены'
       messageItem.classList.add('goods__no-product');
