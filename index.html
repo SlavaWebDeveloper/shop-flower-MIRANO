@@ -46,7 +46,7 @@
             placeholder="Букет из роз"
           />
 
-          <button class="header__search-button">
+          <button class="header__search-button" aria-label="Поиск">
             <svg
               width="20"
               height="20"
@@ -71,7 +71,7 @@
           loading="lazy"
         />
 
-        <button class="header__cart-button">0</button>
+        <button class="header__cart-button" aria-label="Корзина">0</button>
       </div>
     </header>
 
@@ -89,14 +89,22 @@
           </div>
 
           <figure class="hero__group-image">
-            <img
-              src="../img/hero-left.jpg"
-              alt="Букет цветов в банке. В букете ярко-оранжевые розу, оранжевые тюльпаны и львиный зев. Дополнительно в композицию включены белые цветы и зеленые элементы, придающие объем и разнообразие."
-              class="hero__image hero__image_border-left"
-              width="284"
-              height="352"
-              loading="lazy"
-            />
+            <picture class="hero__image hero__image_border-left">
+              <source
+                srcset="/img/hero-left@1x.avif 1x, /img/hero-left@2x.avif 2x"
+                type="image/avif"
+              />
+
+              <source
+                srcset="/img/hero-left@1x.webp 1x, /img/hero-left@2x.webp 2x"
+                type="image/webp"
+              />
+              <img
+                src="/img/hero-left@1x.jpg"
+                srcset="/img/hero-left@2x.jpg 2x"
+                alt="Букет цветов в банке. В букете ярко-оранжевые розу, оранжевые тюльпаны и львиный зев. Дополнительно в композицию включены белые цветы и зеленые элементы, придающие объем и разнообразие"
+              />
+            </picture>
 
             <svg
               class="hero__image hero__image_border-center"
@@ -116,23 +124,28 @@
                   fill="#D9D9D9"
                 />
               </clippath>
-              <image
-                xlink:href="/img/hero.jpg"
-                width="100%"
-                height="100%"
-                clip-path="url(#hero)"
-                preserveAspectRatio="xMidYMid slice"
-              />
+
+              <foreignObject clip-path="url(#hero)" width="100%" height="100%">
+                <div class="hero__image-center"></div>
+              </foreignObject>
             </svg>
 
-            <img
-              src="../img/hero-right.jpg"
-              alt="Букет цветов в крупной, белой, круглой коробке. Цветы роз нежных пастельных тонов, дополняет объема зеленая трава"
-              class="hero__image hero__image_border-right"
-              width="284"
-              height="352"
-              loading="lazy"
-            />
+            <picture class="hero__image hero__image_border-right">
+              <source
+                srcset="/img/hero-right@1x.avif 1x, /img/hero-right@2x.avif 2x"
+                type="image/avif"
+              />
+
+              <source
+                srcset="/img/hero-right@1x.webp 1x, /img/hero-right@2x.webp 2x"
+                type="image/webp"
+              />
+              <img
+                src="/img/hero-right@1x.jpg"
+                srcset="/img/hero-right@2x.jpg 2x"
+                alt="Букет цветов в крупной, белой, круглой коробке. Цветы роз нежных пастельных тонов, дополняет объема зеленая трава"
+              />
+            </picture>
           </figure>
         </div>
       </section>
@@ -181,7 +194,11 @@
 
             <fieldset class="filter__group filter__group_choices">
               <div class="filter__choices choices">
-                <button class="filter__select choices__btn" type="button">
+                <button
+                  class="filter__select choices__btn"
+                  type="button"
+                  aria-label="Сортировка по цене товара"
+                >
                   Цена
                 </button>
 
@@ -207,6 +224,7 @@
                 <button
                   class="filter__select filter__choices_type choices__btn"
                   type="button"
+                  aria-label="Сортировка по типу товара"
                 >
                   Тип товара
                 </button>
@@ -219,27 +237,44 @@
                       <button
                         class="filter__type-btn filter__type-btn_active"
                         type="button"
+                        aria-label="Тип товара монобукет"
                       >
                         Монобукеты
                       </button>
                     </li>
                     <li class="filter__type-item">
-                      <button class="filter__type-btn" type="button">
+                      <button
+                        class="filter__type-btn"
+                        type="button"
+                        aria-label="Тип товара Авторские букеты"
+                      >
                         Авторские букеты
                       </button>
                     </li>
                     <li class="filter__type-item">
-                      <button class="filter__type-btn" type="button">
+                      <button
+                        class="filter__type-btn"
+                        type="button"
+                        aria-label="Тип товара Цветы в коробке"
+                      >
                         Цветы в коробке
                       </button>
                     </li>
                     <li class="filter__type-item">
-                      <button class="filter__type-btn" type="button">
+                      <button
+                        class="filter__type-btn"
+                        type="button"
+                        aria-label="Тип товара Цветы в корзине"
+                      >
                         Цветы в корзине
                       </button>
                     </li>
                     <li class="filter__type-item">
-                      <button class="filter__type-btn" type="button">
+                      <button
+                        class="filter__type-btn"
+                        type="button"
+                        aria-label="Тип товара Букеты из сухоцветов"
+                      >
                         Букеты из сухоцветов
                       </button>
                     </li>
@@ -264,7 +299,11 @@
               <div class="cart__header">
                 <h3 class="cart__title">Ваш заказ</h3>
 
-                <button class="cart__close" type="button">
+                <button
+                  class="cart__close"
+                  type="button"
+                  aria-label="Кнопка закрытия корзины"
+                >
                   <svg
                     width="28"
                     height="28"
@@ -297,7 +336,11 @@
               <ul class="cart__list"></ul>
 
               <div class="cart__footer">
-                <button class="cart__order-btn" type="button">
+                <button
+                  class="cart__order-btn"
+                  type="button"
+                  aria-label="Оформить заказ"
+                >
                   Оформить <span></span><span></span><span></span><span></span>
                 </button>
                 <p class="cart__price cart__price_total">0&nbsp;₽</p>
@@ -319,7 +362,11 @@
               placeholder="E-mail"
             />
 
-            <button class="subscription__email-button" type="button">
+            <button
+              class="subscription__email-button"
+              type="button"
+              aria-label="Подписаться на рассылку"
+            >
               <svg
                 width="20"
                 height="20"
@@ -328,7 +375,7 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M4.16669 6.66667C4.78502 6.66667 5.70835 6.05583 6.48335 5.4375C7.48335 4.6425 8.35585 3.6925 9.02169 2.60333C9.52085 1.78667 10 0.796667 10 0M10 0C10 0.796667 10.4792 1.7875 10.9784 2.60333C11.645 3.6925 12.5175 4.6425 13.5159 5.4375C14.2917 6.05583 15.2167 6.66667 15.8334 6.66667M10 0V20"
+                  d="M4.16669 6.66667C4.78502 6.66667 5.708365 6.05583 6.48335 5.4375C7.48335 4.6425 8.35585 3.6925 9.02169 2.60333C9.52085 1.78667 10 0.796667 10 0M10 0C10 0.796667 10.4792 1.7875 10.9784 2.60333C11.645 3.6925 12.5175 4.6425 13.5159 5.4375C14.2917 6.05583 15.2167 6.66667 15.8334 6.66667M10 0V20"
                   stroke="white"
                 />
               </svg>
@@ -356,7 +403,11 @@
 
           <ul class="footer__social-list">
             <li class="footer__social-item">
-              <a href="" class="footer__social-link footer__link">
+              <a
+                href=""
+                class="footer__social-link footer__link"
+                aria-label="Telegram канал"
+              >
                 <svg
                   width="28"
                   height="28"
@@ -373,7 +424,11 @@
             </li>
 
             <li class="footer__social-item">
-              <a href="" class="footer__social-link footer__link">
+              <a
+                href=""
+                class="footer__social-link footer__link"
+                aria-label="Youtube канал"
+              >
                 <svg
                   width="28"
                   height="28"
@@ -390,7 +445,11 @@
             </li>
 
             <li class="footer__social-item">
-              <a href="" class="footer__social-link footer__link">
+              <a
+                href=""
+                class="footer__social-link footer__link"
+                aria-label="Вконтакте"
+              >
                 <svg
                   width="28"
                   height="28"

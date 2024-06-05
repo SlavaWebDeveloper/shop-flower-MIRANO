@@ -24,11 +24,4 @@ export const renderProducts = async () => {
 
   productStore.subcribe(updateList);
   updateList();
-  // const products = await fetchProducts();
-  // const productCards = products.map(product => ProductCard(product));
-  // goodsList.append(...productCards);
-  // products.forEach((product) => {
-  //   const productCard = ProductCard(product);
-  //   goodsList.append(productCard)
-  // })
 }
