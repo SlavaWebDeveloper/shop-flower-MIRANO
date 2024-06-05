@@ -7,7 +7,7 @@ export const filterProducts = () => {
   const goodsSection = document.querySelector('.goods');
   const goodsTitle = goodsSection.querySelector('.goods__title');
 
-  const applyFilters = () => {
+  const applyFilters = (category) => {
     const formData = new FormData(filterForm);
     const type = formData.get('type');
     const minPrice = formData.get('minPrice');
@@ -17,6 +17,7 @@ export const filterProducts = () => {
     if (type) params.type = type;
     if (minPrice) params.minPrice = minPrice;
     if (maxPrice) params.maxPrice = maxPrice;
+    if (category) params.category = category;
 
     callBackWithPreload(goodsSection, productStore.fetchProducts(), params);
   }
@@ -36,9 +37,14 @@ export const filterProducts = () => {
       return;
     }
 
-
     if (target.name === 'minPrice' || target.name === 'maxPrice') {
       applyPriceFilters();
+    }
+  })
+
+  filterForm.addEventListener('click', ({ target }) => {
+    if (target.closest(".filter__type-btn")) {
+      applyFilters(target.textContent);
     }
   })
 }

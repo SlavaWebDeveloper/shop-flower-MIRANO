@@ -1,4 +1,5 @@
 import { debounce } from "./debounce";
+import { productStore } from "./Store";
 
 const adjustElementPosition = (elementBox, count = 0) => {
   const rect = elementBox.getBoundingClientRect();
@@ -77,5 +78,6 @@ export const initChoices = () => {
       })
     );
 
+    productStore.subcribe(() => adjustElementPosition(box))
   })
 };
